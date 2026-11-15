@@ -1,0 +1,143 @@
+
+.weather-map-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 30px 0;
+    box-sizing: border-box;
+}
+
+.weather-map-heading {
+    margin-bottom: 18px;
+}
+
+.weather-map-heading h2 {
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+.weather-map-heading p {
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.weather-map {
+    width: 100%;
+    height: clamp(280px, 50vw, 480px);
+    min-width: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.map-weather-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-top: 20px;
+    padding: 22px;
+    border-radius: 16px;
+    background: var(--card-bg, #ffffff);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+}
+
+.map-weather-card h3 {
+    margin-bottom: 8px;
+}
+
+.map-coordinates {
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 18px;
+    overflow-wrap: anywhere;
+}
+
+.map-weather-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.map-weather-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.map-weather-details span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.map-weather-details strong {
+    font-size: 17px;
+    overflow-wrap: anywhere;
+}
+
+.map-error {
+    color: #dc2626;
+}
+
+@media (min-width: 768px) {
+    .map-weather-details {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .weather-map-container {
+        margin: 20px 0;
+    }
+
+    .weather-map {
+        height: 350px;
+        border-radius: 12px;
+    }
+
+    .map-weather-card {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .weather-map {
+        height: 290px;
+    }
+
+    .map-weather-details {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-map-heading h2 {
+        font-size: 20px;
+    }
+}
+.weather-map {
+    width: 100%;
+    height: 450px;
+    min-height: 300px;
+    max-width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.leaflet-container {
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .weather-map {
+        height: 380px;
+    }
+}
+
+@media (max-width: 480px) {
+    .weather-map {
+        height: 300px;
+        border-radius: 12px;
+    }
+}
